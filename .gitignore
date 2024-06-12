@@ -1,0 +1,15 @@
+.venv/
+env/
+*/migrations/*
+.env
+.env.prod
+*.pyc
+*~
+*.swp
+application.log
+.idea/
+test.png
+*.lock
+*.log
+*.DS_Store
+.google/*
