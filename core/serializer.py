@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 
-class ConstructionPricePredictionSerializer(serializers.Serializer):
+class ConstructionCostPredictionSerializer(serializers.Serializer):
     """
     building height
     builtup area
@@ -19,10 +19,9 @@ class ConstructionPricePredictionSerializer(serializers.Serializer):
     number_of_rooms = serializers.IntegerField(required=True)
     building_function = serializers.CharField(required=True)
     number_of_units = serializers.IntegerField(required=True)
-    total_project_cost = serializers.FloatField(required=True)
 
 
-class MaterialPricePredictionSerializer(serializers.Serializer):
+class MaterialCostPredictionSerializer(serializers.Serializer):
     """
     inflationrate	imports	exports	moneysupplym1	BMI
     """
