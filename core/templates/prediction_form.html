@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <h1>Predict Construction Cost</h1>
+    <form id="construction-form" action="/core/predict-construction-cost" method="post">
+        {% csrf_token %}
+        <label for="building_height">Building Height:</label>
+        <input type="number" name="building_height" step="0.01" required><br>
+
+        <label for="builtup_area">Built-up Area:</label>
+        <input type="number" name="builtup_area" step="0.01" required><br>
+
+        <label for="number_of_stories">Number of Stories:</label>
+        <input type="number" name="number_of_stories" required><br>
+
+        <label for="number_of_columns">Number of Columns:</label>
+        <input type="number" name="number_of_columns" required><br>
+
+        <label for="number_of_rooms">Number of Rooms:</label>
+        <input type="number" name="number_of_rooms" required><br>
+
+        <label for="building_function">Building Function:</label>
+        <input type="text" name="building_function" required><br>
+
+        <label for="number_of_units">Number of Units:</label>
+        <input type="number" name="number_of_units" required><br>
+
+        <button type="submit">Predict Cost</button>
+    </form>
+
+    <h1>Predict Material Cost</h1>
+    <form id="material-form" action="/core/predict-material-cost" method="post">
+        {% csrf_token %}
+        <label for="inflation_rate">Inflation Rate:</label>
+        <input type="number" name="inflation_rate" step="0.01" required><br>
+
+        <label for="imports">Imports:</label>
+        <input type="number" name="imports" step="0.01" required><br>
+
+        <label for="exports">Exports:</label>
+        <input type="number" name="exports" step="0.01" required><br>
+
+        <label for="money_supply_m1">Money Supply M1:</label>
+        <input type="number" name="money_supply_m1" step="0.01" required><br>
+
+        <button type="submit">Predict Prices</button>
+    </form>
+</body>
+</html>
