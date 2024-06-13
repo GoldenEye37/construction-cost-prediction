@@ -29,5 +29,4 @@ class MaterialCostPredictionSerializer(serializers.Serializer):
     imports = serializers.FloatField(required=True)
     exports = serializers.FloatField(required=True)
     money_supply_m1 = serializers.FloatField(required=True)
-    bmi = serializers.FloatField(required=True)
 
