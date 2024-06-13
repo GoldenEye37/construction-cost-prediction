@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>BMPI Result</h1>
+    <h2>Input Data</h2>
+    <ul>
+        {% for key, value in data.items %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <h2>BMPI predicted</h2>
+    <p>{{ bmpi_predicted }}</p>
+
+    <h2>Material Prices</h2>
+
+    {#    display the material prices here e.g cement: 1000, sand: 500, etc#}
+    <ul>
+        {% for key, value in material_prices.items %}
+            <li>{{ key }}: ${{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
